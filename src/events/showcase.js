@@ -1,7 +1,7 @@
 const { showcase } = require("../../config.json");
 
 module.exports = {
-	name: 'voiceStateUpdate',
+	name: 'messageCreate',
 	once: false,
     client: true,
 	async execute(client,message) {
