@@ -8,7 +8,8 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-require("./slashCommandHandler.js")(client, token);
+require("./src/slashCommandHandler.js")(client, token);
+require("./src/eventHandler.js")(client);
 
 const keepAlive = require("./server");
 keepAlive();
