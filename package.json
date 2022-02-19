@@ -1,0 +1,20 @@
+{
+  "name": "bedrock-gamtest-bot",
+  "version": "1.0.0",
+  "description": "a bot for the bedrock gamtest discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Smell of curry",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.27.2",
+    "discord.js": "^13.6.0"
+  }
+}
