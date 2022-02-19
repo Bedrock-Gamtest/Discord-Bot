@@ -10,4 +10,7 @@ client.on("ready", () => {
 
 require("./slashCommandHandler.js")(client, token);
 
+const keepAlive = require("./server");
+keepAlive();
+// Login the bot
 client.login(token);
