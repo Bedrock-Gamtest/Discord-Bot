@@ -5,7 +5,7 @@ const { Routes } = require("discord-api-types/v9");
 module.exports = async (client, token) => {
   const rest = new REST({ version: "9" }).setToken(token);
   const names = fs
-    .readdirSync(`${process.cwd()}/commands`)
+    .readdirSync(`${process.cwd()}/src/commands`)
     .filter((name) => name.endsWith(".js"));
   let commands = [];
 
