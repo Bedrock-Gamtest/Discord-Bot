@@ -35,7 +35,12 @@
         "top.gg",
         "bit.ly",
         "mediafire.com",
-        "dropbox.com"
+        "dropbox.com",
+        "wikipedia.org",
+        "steampowered.com",
+        "epicgames.com",
+        "visualstudio.com",
+        "blockbench.net",
     ],
     "reactionChannel":"Channel ID here pls",
     "reactionMessage":"Message ID here pls",
