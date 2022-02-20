@@ -1,4 +1,20 @@
 {
     "showcase":"944073871634624562",
-    "CREATE_VC":"944700541487955988"
+    "CREATE_VC":"944700541487955988",
+    "reactionChannel":"Channel ID here pls",
+    "reactionMessage":"Message ID here pls",
+    "reactionRoles": [
+        {
+            "role_name":"Gametest beginner",
+            "reaction_id":"🟩"
+        },
+        {
+            "role_name":"Gametest Intermediate",
+            "reaction_id":"🟧"
+        },
+        {
+            "role_name":"Gametest God",
+            "reaction_id":"🟪"
+        }
+    ]
 }

@@ -19,10 +19,13 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+require("./src/roleHandler.js")(client);
 require("./src/slashCommandHandler.js")(client, token);
 require("./src/eventHandler.js")(client);
 
 const keepAlive = require("./server");
+
 keepAlive();
+
 // Login the bot
 client.login(token);
