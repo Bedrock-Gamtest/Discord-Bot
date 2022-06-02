@@ -1,0 +1,2 @@
+#Replit Setup 
+run = ["npm", "run","start"]
