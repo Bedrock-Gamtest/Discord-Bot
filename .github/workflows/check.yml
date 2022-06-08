@@ -15,9 +15,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm i
-     
-      - name: Create eslint config
-        run: npm init @eslint/config
 
       - name: Lint src
         run: npx eslint src/**
