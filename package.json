@@ -12,7 +12,12 @@
   ],
   "eslintConfig": {
       "env": {         
-         "node": true
+         "node": true,
+         "commonjs":true,
+         "esnext":true
+      },
+      "parserOptions": {
+          "ecmaVersion": 2021
       }
   },
   "author": "Smell of curry",
