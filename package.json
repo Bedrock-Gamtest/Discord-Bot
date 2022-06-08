@@ -13,8 +13,7 @@
   "eslintConfig": {
       "env": {         
          "node": true,
-         "commonjs":true,
-         "esnext":true
+         "commonjs":true
       },
       "parserOptions": {
           "ecmaVersion": 2021
