@@ -10,6 +10,11 @@
   "keywords": [
     "bot"
   ],
+  "eslintConfig": {
+      "env": {         
+         "node": true
+      }
+  },
   "author": "Smell of curry",
   "license": "MIT",
   "dependencies": {
