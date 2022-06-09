@@ -19,7 +19,7 @@ module.exports = {
       }).catch();
     
       const res = await fetch(file?.url);
-      if (!res.ok) return message.reply('An error accured while fetching your file: '+res.statusText);
+      if (!res.ok) return message.reply('An error occured while fetching your file: '+res.statusText);
       
       try {
         const text = await res.text();
