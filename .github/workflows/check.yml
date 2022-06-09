@@ -19,5 +19,5 @@ jobs:
       - name: Lint src
         run: npx eslint bot/**
       
-      - name: Start Bot
-        run: npm start
+      - name: Start Server
+        run: node server.js
