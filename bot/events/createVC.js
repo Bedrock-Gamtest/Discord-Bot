@@ -32,6 +32,6 @@ module.exports = {
             });
             
             console.warn("[🎤 VC] %s has successfully created a VoiceChannel.",user.tag);
-        } catch(err) { return console.warn("[🎤 VC] An error accured while creating a VoiceChannel. Error: %s",err) };
+        } catch(err) { return console.warn("[🎤 VC] An error occured while creating a VoiceChannel. Error: %s",err) };
     }
 };
