@@ -1,62 +1,11 @@
 {
-    "showcase":"944073871634624562",
-    "portfolio_notification":"881357863740661771",
-    "CREATE_VC":"944700541487955988",
-    "safe_site":[
-        "youtu.be",
-        "google.com",
-        "facebook.com",
-        "youtube.com",
-        "bedrock.dev",
-        "minecraft.net",
-        "aka.ms",
-        "microsoft.net",
-        "fandom.com",
-        "mojang.com",
-        "twitter.com",
-        "roblox.com",
-        "github.com",
-        "firebase.com",
-        "realmbot.dev",
-        "discord.com",
-        "discord.gg",
-        "tenor.com",
-        "pastebin.com",
-        "codecademy.com",
-        "w3schools.com",
-        "mozilla.org",
-        "regexr.com",
-        "stackoverflow.com",
-        "discordapp.com",
-        "streamable.com",
-        "imgur.com",
-        "twitch.com",
-        "mcpedl.com",
-        "mcbehub.com",
-        "top.gg",
-        "bit.ly",
-        "mediafire.com",
-        "dropbox.com",
-        "wikipedia.org",
-        "steampowered.com",
-        "epicgames.com",
-        "visualstudio.com",
-        "blockbench.net",
-    ],
-    "reactionChannel":"Channel ID here pls",
-    "reactionMessage":"Message ID here pls",
-    "reactionRoles": [
-        {
-            "role_name":"Gametest beginner",
-            "reaction_id":"🟩"
-        },
-        {
-            "role_name":"Gametest Intermediate",
-            "reaction_id":"🟧"
-        },
-        {
-            "role_name":"Gametest God",
-            "reaction_id":"🟪"
-        }
-    ]
+    "showcase":"981909927406743632",
+    "CREATE_VC":"981909300500918356",
+
+    "portfolio":"983011109734875176",
+    "orginization":"Bedrock-Gamtest",
+    "repository":"portfolio",
+    
+    "guild_id":"981909300500918352",
+    "client_id":"981836547211014154"
 }

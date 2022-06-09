@@ -4,12 +4,28 @@
   "description": "a bot for the bedrock gamtest discord",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "keywords": [
-    "bot"
+    "bot",
+    "mcbe-gametest",
+    "mcbe"
   ],
+<<<<<<< HEAD
+  "contributers": [
+    {
+      "name": "ReallyfatYoshi",
+      "url": "https://github.com/ReallyFatYoshi"
+    },
+    {
+      "name": "smell-of-curry",
+      "url": "https://github.com/smell-of-curry"
+    }
+  ],
+  "author": "Smell Of Curry / ReallyFatYoshi",
+  "license": "APACHE 2.0",
+=======
+>>>>>>> origin/main
   "eslintConfig": {
       "env": {         
          "node": true,
@@ -19,6 +35,21 @@
           "ecmaVersion": 2021
       }
   },
+<<<<<<< HEAD
+  "dependencies": {
+    "@discordjs/builders": "^0.13.0",
+    "@discordjs/rest": "^0.4.1",
+    "@replit/database": "^2.0.2",
+    "discord-api-types": "^0.33.2",
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "0.0.1-security",
+    "node": "^17.7.2",
+    "node-fetch-commonjs": "^3.1.1",
+    "prettier": "^2.6.2",
+    "uuid": "^8.3.2"
+=======
   "author": "Smell of curry",
   "license": "MIT",
   "dependencies": {
@@ -29,5 +60,6 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "node": "^16.10.0"
+>>>>>>> origin/main
   }
 }

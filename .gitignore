@@ -1,4 +1,10 @@
 node_modules
-settings.json
 .env
 package-lock.json
+src/roleHandler.js
+src/portfolio.js
+*(copy).*
+views
+.upm
+.breakpoints
+replit_zip_error_log.txt
