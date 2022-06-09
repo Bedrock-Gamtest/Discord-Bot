@@ -1,2 +1,3 @@
+#Replit Setup 
 language = "nodejs"
-run = "npm start"
+run = "npm run start"

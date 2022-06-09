@@ -9,6 +9,6 @@ module.exports = {
      * @param {Interaction} interaction
      */
     async execute(interaction) {
-        interaction.reply('https://www.youtube.com/c/smellofcurry');
+        interaction.reply({content:'https://www.youtube.com/c/smellofcurry', ephemeral: true});
     }
 }

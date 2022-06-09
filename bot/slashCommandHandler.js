@@ -1,11 +1,12 @@
 const fs = require("fs");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
+const { guild_id, client_id } = require('../config.json');
 
 module.exports = async (client, token) => {
   const rest = new REST({ version: "9" }).setToken(token);
   const names = fs
-    .readdirSync(`${process.cwd()}/src/commands`)
+    .readdirSync(`${process.cwd()}/bot/commands`)
     .filter((name) => name.endsWith(".js"));
   let commands = [];
 
@@ -20,13 +21,14 @@ module.exports = async (client, token) => {
 
       await rest.put(
         Routes.applicationGuildCommands(
-          "944643730600763454",
-          "862462061594017802"
+          client_id,
+          guild_id
         ),
         { body: commands }
       );
 
       console.log("Successfully reloaded application (/) commands.");
+      commands = [];
     } catch (error) {
       console.error(error);
     }

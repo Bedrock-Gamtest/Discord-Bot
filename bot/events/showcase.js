@@ -13,7 +13,7 @@ module.exports = {
         !message.content.match(/^(https?):\/\/[^\s$.?#].[^\s]*$/gm)
       )
         return message.delete().catch(() => {});
-      const date = new Date();
+      
       message.react("👍");
       message.react("👎");
       message.startThread({

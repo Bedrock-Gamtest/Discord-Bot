@@ -10,6 +10,9 @@ module.exports = {
      * @param {Interaction} interaction
      */
     async execute(interaction) {
-        interaction.reply('Pong!');
+        const d = Date.now()
+        await interaction.reply({content:'**PING!**\nWaiting for response..'});
+        await interaction.editReply({content:`**PONG!**\nReponse Time: ${Date.now()-d}ms`})
+      
     }
 }

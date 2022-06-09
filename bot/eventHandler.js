@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 module.exports = (client) => {
-    const fileNames = fs.readdirSync(process.cwd()+`/src/events`).filter(file=>file.endsWith(".js"));
+    const fileNames = fs.readdirSync(process.cwd()+`/bot/events`).filter(file=>file.endsWith(".js"));
     fileNames.forEach(fileName=>{
         try {
             const file = require(`./events/${fileName}`);
