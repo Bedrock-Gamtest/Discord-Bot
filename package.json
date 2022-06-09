@@ -11,7 +11,6 @@
     "mcbe-gametest",
     "mcbe"
   ],
-<<<<<<< HEAD
   "contributers": [
     {
       "name": "ReallyfatYoshi",
@@ -24,8 +23,6 @@
   ],
   "author": "Smell Of Curry / ReallyFatYoshi",
   "license": "APACHE 2.0",
-=======
->>>>>>> origin/main
   "eslintConfig": {
       "env": {         
          "node": true,
@@ -35,7 +32,6 @@
           "ecmaVersion": 2021
       }
   },
-<<<<<<< HEAD
   "dependencies": {
     "@discordjs/builders": "^0.13.0",
     "@discordjs/rest": "^0.4.1",
@@ -49,17 +45,5 @@
     "node-fetch-commonjs": "^3.1.1",
     "prettier": "^2.6.2",
     "uuid": "^8.3.2"
-=======
-  "author": "Smell of curry",
-  "license": "MIT",
-  "dependencies": {
-    "@discordjs/builders": "^0.15.0",
-    "@discordjs/rest": "^0.3.0",
-    "discord-api-types": "^0.33.5",
-    "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "node": "^16.10.0"
->>>>>>> origin/main
   }
 }
