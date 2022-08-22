@@ -33,7 +33,7 @@
       }
   },
   "dependencies": {
-    "@discordjs/builders": "^0.15.0",
+    "@discordjs/builders": "^1.2.0",
     "@discordjs/rest": "^0.4.1",
     "@replit/database": "^2.0.2",
     "discord-api-types": "^0.34.0",
