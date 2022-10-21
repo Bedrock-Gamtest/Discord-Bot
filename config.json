@@ -1,12 +1,14 @@
 {
 
-    "showcase":"944073871634624562",
-    "CREATE_VC":"944700541487955988",
-
-    "portfolio":"xxx-xxx-xxx-xxx",
-    "orginization":"Bedrock-Gamtest",
-    "repository":"portfolio",
+    "SHOWCASE_CHANNEL":"981909927406743632",
+    "CREATE_VC":"981909300500918356",
+    "PORTFOLIO_CHANNEL":"xxx-xxx-xxx-xxx",
     
-    "guild_id":"862462061594017802",
-    "client_id":"944643730600763454"
+    "GITHUB_PROFILE":"Bedrock-Gamtest",
+    "GITHUB_REPOSITORY":"portfolio",
+    
+    "GUILD_ID":"981909300500918352",
+    "CLIENT_ID":"981836547211014154",
+
+    "max_file_size":32000
 }
