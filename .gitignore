@@ -1,10 +1,11 @@
 node_modules
 .env
 package-lock.json
-src/roleHandler.js
-src/portfolio.js
 *(copy).*
 views
 .upm
 .breakpoints
 replit_zip_error_log.txt
+/bot
+*.js
+src/hooks/ge*.ts
