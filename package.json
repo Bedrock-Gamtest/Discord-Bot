@@ -1,6 +1,6 @@
 {
   "name": "bedrock-gamtest-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A bot for the bedrock gametest discord",
   "scripts": {
@@ -21,6 +21,7 @@
   "dependencies": {
     "@discordjs/builders": "^1.3.0",
     "@discordjs/rest": "^1.3.0",
+    "@discordjs/voice": "^0.13.0",
     "@napi-rs/canvas": "^0.1.30",
     "axios": "^1.1.3",
     "discord-api-types": "^0.37.14",
