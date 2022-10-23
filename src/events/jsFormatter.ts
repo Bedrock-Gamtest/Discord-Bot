@@ -12,9 +12,12 @@ export default {
   once: false,
   async execute(client:ClientInteface,message: Message) {
     const file = message.attachments?.at(0);
-
+    
     // @ts-ignore
-    if (!file || file.name.toLowerCase() != "format_me.js") return;
+    if (!file?.name.toLowerCase().match(/format\_me\.js/g)) return;
+    
+    //@ts-ignore
+    const compact = file.name.toLowerCase().match(/compact/g)?.length > 0
 
     if (file.size > (max_file_size as unknown as number))
       return message
@@ -36,14 +39,16 @@ export default {
 
     try {
       const text = await req.data;
-      const data = await formatFile(text);
+      const data = await formatFile(text,
+          compact
+        );
 
-      const bufferData = await Buffer.alloc(data.length, data);
+      const bufferData = Buffer.alloc(data.length, data);
       const attachment = new AttachmentBuilder(bufferData, {
-        name: "formatted_file.js",
+        name: `${message.author.tag}_file.js`,
       });
       message.reply({
-        content: "Here's your formatted file:",
+        content: `Here's your formatted${compact ?  "and compacted":""} file:`,
         files: [attachment],
         // @ts-ignore
         ephemeral: true,

@@ -5,14 +5,15 @@ import * as path from "path";
 import { format } from "prettier";
 
 const temp = path.join(process.cwd(), "temp");
+if (!fs.existsSync(temp)) fs.mkdirSync(temp);
 
-export default async function formatFile(text: string): Promise<string> {
+export default async function formatFile(text: string, compact: boolean = false): Promise<string> {
   const uuid = randomUUID();
   const filePath = path.join(temp, uuid + ".js");
 
   fs.writeFileSync(filePath, text, { encoding: "utf-8" });
 
-  esbuild.buildSync({
+  if (compact) esbuild.buildSync({
     outdir: temp,
     entryPoints: [filePath],
     minifySyntax: true,
