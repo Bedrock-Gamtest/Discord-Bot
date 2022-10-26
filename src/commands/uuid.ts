@@ -23,6 +23,10 @@ export default {
         const uuid = new Array(count).fill(null).map(()=>randomUUID());
 
         const embed = new EmbedBuilder()
+        .setAuthor({
+            name: client.user?.username as string,
+            url: client.user?.avatarURL() as unknown as string,
+          })
         .setColor(Colour.default)
         .setDescription(`**UUID${uuid.length > 1 ? "'s":""}:**\n${uuid.join("\n")}`);
         interaction.reply({embeds:[embed]});
