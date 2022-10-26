@@ -1,8 +1,15 @@
-import { Client, GatewayIntentBits } from "discord.js";
-import ClientInteface from "./src/interfaces/client.js";
+import ClientInterface from "./src/interfaces/client.js";
+import {
+  Client,
+  EmbedBuilder,
+  GatewayIntentBits,
+  NewsChannel,
+  TextChannel,
+} from "discord.js";
 
-const client = new Client({ 
-  intents:[
+
+const client = new Client({
+  intents: [
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
@@ -12,21 +19,24 @@ const client = new Client({
     GatewayIntentBits.GuildWebhooks,
     GatewayIntentBits.GuildVoiceStates,
     GatewayIntentBits.GuildMembers,
-  ]
+  ],
 });
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user?.tag}!`);
 });
 
-import("dotenv").then(async (res)=>{
-  res.config();
-  
-  const token = process.env.TOKEN;
+(await import("dotenv")).config();
 
-  (await import("./src/handlers/events.js")).default(client);
-  (await import("./src/handlers/commands.js")).default(client as ClientInteface,token as string);
+const token = process.env.TOKEN;
 
-  // Login the bot
-  client.login(token);
-});
+(await import("./src/handlers/events.js")).default(client);
+(await import("./src/handlers/commands.js")).default(
+  client as ClientInterface,
+  token as string
+);
+
+(await import("./notify.js")).default(client);
+
+// Login the bot
+client.login(token);

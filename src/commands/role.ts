@@ -41,7 +41,11 @@ export default {
           await interaction.reply({
             embeds: [
               new EmbedBuilder()
-                .setColor(Colour.waiting)
+              .setAuthor({
+                name: client.user?.username as string,
+                url: client.user?.avatarURL() as unknown as string,
+              })  
+              .setColor(Colour.waiting)
                 .setDescription(
                   `${
                     roleOption == "add"
@@ -62,7 +66,11 @@ export default {
           await interaction.editReply({
             embeds: [
               new EmbedBuilder()
-                .setColor(Colour.succes)
+              .setAuthor({
+                name: client.user?.username as string,
+                url: client.user?.avatarURL() as unknown as string,
+              })  
+              .setColor(Colour.success)
                 .setDescription(
                   `The role: **${role?.name}** has been ${
                     roleOption == "add" ? "given to" : "removed from"
@@ -75,6 +83,10 @@ export default {
       await interaction.followUp({
         embeds: [
           new EmbedBuilder()
+          .setAuthor({
+            name: client.user?.username as string,
+            url: client.user?.avatarURL() as unknown as string,
+          })
             .setColor(Colour.error)
             .setDescription(
               "An error has occurred, while adding or removing this role to **All Members**."

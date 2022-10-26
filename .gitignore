@@ -8,4 +8,5 @@ views
 replit_zip_error_log.txt
 /bot
 *.js
-src/hooks/ge*.ts
+src/hooks/**
+!src/hooks/formatFile.ts
