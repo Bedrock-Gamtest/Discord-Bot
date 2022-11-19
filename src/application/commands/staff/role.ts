@@ -6,7 +6,7 @@ import {
   EmbedBuilder,
   PermissionFlagsBits,
 } from "discord.js";
-import { Colour } from "../interfaces/colour.js";
+import { Colour } from "../../../resources/all.js";
 
 export default {
   data: new SlashCommandBuilder()

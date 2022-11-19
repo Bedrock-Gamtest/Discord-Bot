@@ -3,8 +3,8 @@ import { CommandInteraction } from "discord.js";
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { EmbedBuilder } from 'discord.js';
 import { randomUUID } from "crypto";
-import ClientInteface from "../interfaces/client.js";
-import { Colour } from "../interfaces/colour.js";
+import ClientInteface from "../../../resources/resources/client.js";
+import { Colour } from "../interfaces/colour.js.js";
 
 export default {
     data: new SlashCommandBuilder()

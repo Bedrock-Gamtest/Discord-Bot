@@ -2,7 +2,7 @@ import { Client, EmbedBuilder, NewsChannel } from "discord.js";
 import { MongoClient } from "mongodb";
 import * as fs from "fs";
 import * as path from "path";
-import { Colour } from "./src/interfaces/colour.js";
+import { Colour } from "./src/resources/all.js";
 
 export default (BotClient:Client) => {
 

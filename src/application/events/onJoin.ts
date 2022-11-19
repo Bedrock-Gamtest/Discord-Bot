@@ -1,6 +1,6 @@
 import { GuildMember, Events } from "discord.js";
 
-import ClientInteface from "../interfaces/client.js";
+import ClientInteface from "../definitions/resources/client.js";
 
 export default {
   event: Events.GuildMemberAdd,

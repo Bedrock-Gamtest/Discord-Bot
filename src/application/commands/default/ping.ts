@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
 import { Client, CommandInteraction, EmbedBuilder } from "discord.js";
-import { Colour } from "../interfaces/colour.js";
+import { Colour } from "../interfaces/colour.js.js";
 
 export default {
   data: new SlashCommandBuilder()

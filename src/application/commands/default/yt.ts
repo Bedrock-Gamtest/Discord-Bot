@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
 import { CommandInteraction } from "discord.js";
-import ClientInteface from "../interfaces/client.js";
+import ClientInteface from "../../../resources/resources/client.js";
 export default {
   data: new SlashCommandBuilder()
     .setName("yt")

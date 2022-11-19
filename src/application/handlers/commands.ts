@@ -3,12 +3,12 @@ import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v9";
 import { Collection } from "discord.js";
 import * as path from "path";
-import ClientInteface from "../interfaces/client.js";
+import {ClientInterface} from "../../resources/all.js";
 
 const { GUILD_ID, CLIENT_ID } = process.env;
 const CommandsDir = path.join(process.cwd(), "/src/commands");
 
-export default async (client: ClientInteface, token: string) => {
+export default async (client: ClientInterface, token: string) => {
   const rest = new REST({ version: "9" }).setToken(token);
   const files = fs
     .readdirSync(CommandsDir)
@@ -53,7 +53,7 @@ export default async (client: ClientInteface, token: string) => {
     }
   })();
 
-  client.on("interactionCreate", async (interaction: any) => {
+  client.on("interactionCreate", async (interaction) => {
     const data = (
       await import(
         path.join(

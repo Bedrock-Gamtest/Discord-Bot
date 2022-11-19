@@ -3,7 +3,7 @@ import { Buffer } from "node:buffer";
 import axios from "axios";
 
 import formatFile from "../hooks/formatFile.js";
-import ClientInteface from "../interfaces/client.js";
+import ClientInteface from "../definitions/resources/client.js";
 
 const { max_file_size } = process.env;
 
