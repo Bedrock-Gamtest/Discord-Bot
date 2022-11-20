@@ -1,13 +1,12 @@
 import { ChannelType } from "discord-api-types/v10";
-import { Message, ThreadAutoArchiveDuration } from "discord.js";
-import ClientInteface from "../definitions/resources/client.js";
+import { Client, Message, ThreadAutoArchiveDuration } from "discord.js";
 
 const { SHOWCASE_CHANNEL } = process.env;
 
 export default {
   event: "messageCreate",
   once: false,
-  async execute(client: ClientInteface, message: Message) {
+  async execute(client: Client, message: Message) {
     if (
       message.channelId === SHOWCASE_CHANNEL &&
       message.channel.type === ChannelType.GuildAnnouncement

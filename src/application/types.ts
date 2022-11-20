@@ -10,6 +10,7 @@ export interface IApplicationCommand{
 }
 export interface IApplicationEvent{
     once?: Boolean
-    eventName: keyof ClientEvents;
-    execute: (client: Application, interaction: ClientEvents[this['eventName']]) => Awaitable<void>
+    identifier?: Symbol 
+    event: keyof ClientEvents;
+    execute: (client: Application, ...interactions: ClientEvents[this['event']]) => Awaitable<void>
 }

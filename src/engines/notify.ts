@@ -2,7 +2,7 @@ import { Client, EmbedBuilder, NewsChannel } from "discord.js";
 import { MongoClient } from "mongodb";
 import * as fs from "fs";
 import * as path from "path";
-import { Colour } from "./src/resources/all.js";
+import { Colors } from "../resources/all.js";
 
 export default (BotClient:Client) => {
 
@@ -84,7 +84,7 @@ async function notify(
           embeds: [
             new EmbedBuilder()
               .setURL(`https://www.npmjs.com/package/${data.module}`)
-              .setColor(Colour.info)
+              .setColor(Colors.info)
               .setTitle(
                 `**${data.module}** has just been updated from version **${data.version[0]}** to **${data.version[1]}**.`
               ),
@@ -92,5 +92,5 @@ async function notify(
         })
         .then((res) => res.crosspost().catch())
         .catch();
-  }
+}
   
