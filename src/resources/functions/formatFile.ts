@@ -7,7 +7,7 @@ import { format } from "prettier";
 const temp = path.join(process.cwd(), "temp");
 if (!fs.existsSync(temp)) fs.mkdirSync(temp);
 
-export default async function formatFile(text: string, compact: boolean = false): Promise<string> {
+export async function formatFile(text: string, compact: boolean = false): Promise<string> {
   const uuid = randomUUID();
   const filePath = path.join(temp, uuid + ".js");
 
@@ -30,3 +30,4 @@ export default async function formatFile(text: string, compact: boolean = false)
   if (fs.existsSync(filePath)) fs.rmSync(filePath);
   return text;
 }
+export default formatFile;

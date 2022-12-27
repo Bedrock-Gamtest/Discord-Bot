@@ -2,7 +2,7 @@ import { Message, AttachmentBuilder, Client } from "discord.js";
 import { Buffer } from "node:buffer";
 import axios from "axios";
 
-import formatFile from "../../hooks/formatFile.js";
+import {formatFile} from "../../resources/all.js";
 
 const { max_file_size } = process.env;
 

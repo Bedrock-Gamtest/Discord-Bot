@@ -1,14 +1,16 @@
 import { ChannelType } from "discord-api-types/v10";
-import { Client, Message, ThreadAutoArchiveDuration } from "discord.js";
+import { Message, ThreadAutoArchiveDuration } from "discord.js";
+import { Application } from "../../application/app.js";
+import { FunctionalChannels } from "../../resources/all.js";
 
 const { SHOWCASE_CHANNEL } = process.env;
 
 export default {
   event: "messageCreate",
   once: false,
-  async execute(client: Client, message: Message) {
+  async execute(client: Application, message: Message) {
     if (
-      message.channelId === SHOWCASE_CHANNEL &&
+      message.channelId === client.guildManagers[message.guildId??"-"]?.get(FunctionalChannels.showcase)?.id &&
       message.channel.type === ChannelType.GuildAnnouncement
     ) {
 
@@ -28,3 +30,19 @@ export default {
     }
   },
 };
+
+const Functions = {
+  [FunctionalChannels.best]: ()=>{},
+  [FunctionalChannels.questions]: questions,
+  [FunctionalChannels.showcase]: showcase,
+  [FunctionalChannels.suggestions]: suggestions
+}
+async function showcase(app: Application, msg: Message){
+
+}
+async function suggestions(app: Application, msg: Message) {
+  
+}
+async function questions(app: Application, msg: Message) {
+  
+}

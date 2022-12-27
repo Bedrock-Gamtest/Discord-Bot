@@ -1,6 +1,7 @@
 import { Awaitable, CacheType, Client, ClientEvents, CommandInteraction, SlashCommandBuilder } from "discord.js";
 import { Application } from "./app.js";
-
+export * from './guildData.js';
+export * from './guildManager.js';
 
 export interface IApplicationCommand{
     name?: string | this['data']['name'];
