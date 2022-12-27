@@ -44,7 +44,7 @@ export default {
       if(guildId == null) return await interaction.reply({ephemeral:true,content:"This is server command, you can´t use it in direct messages."});
       const data = client.guildManagers[guildId];
       if(data === undefined) return;
-      if(data.keys().includes(theChannel.id) && data.get(channelType)?.id !== theChannel.id) return await interaction.reply({ephemeral:true,content:"This Channel <#" + theChannel.id +"> is already used with different functional useage."});
+      if(data.hasId(theChannel.id) && data.get(channelType)?.id !== theChannel.id) return await interaction.reply({ephemeral:true,content:"This Channel <#" + theChannel.id +"> is already used with different functional useage."});
       await data.set(channelType,theChannel);
       if(channelType === FunctionalChannels.log) Logger.subscribe(theChannel);
       await interaction.reply(IEphameralMessageEmbed("Functional useage susccessfully added.",`Channel: <#${theChannel.id}> was defined as ${channelType}`,Colors.success));
