@@ -1,27 +1,19 @@
 import '../init/import.js';
 import {
-  CacheType,
   Client,
   ClientEvents,
   ClientOptions,
-  EmbedAuthorOptions,
-  EmbedBuilder,
   GatewayIntentBits,
-  GuildBasedChannel,
   Interaction,
-  MessagePayload,
-  NewsChannel,
   REST,
   Routes,
-  Snowflake,
-  TextChannel,
-  ThreadMemberFlagsBitField,
+  Snowflake
 } from "discord.js";
 import { IApplicationCommand, IApplicationEvent, ReturnGuildManager, CreateGuildDataManager, GuildManager } from './types.js';
 import {Colors, Emoji, FunctionalChannels} from '../resources/all.js'
 export * from './types.js';
 
-const {TOKEN, CLIENT_ID, GUILD_ID  } = process.env as {TOKEN: string, CLIENT_ID: string, GUILD_ID: string};
+const {TOKEN, CLIENT_ID  } = process.env as {TOKEN: string, CLIENT_ID: string};
 
 export class Application extends Client<boolean>{
   get _token(){return (this.token??TOKEN) as string;}
