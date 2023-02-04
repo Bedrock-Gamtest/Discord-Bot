@@ -10,3 +10,4 @@ replit_zip_error_log.txt
 *.js
 src/hooks/**
 !src/hooks/formatFile.ts
+*data.json
