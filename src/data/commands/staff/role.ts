@@ -6,7 +6,7 @@ import {
   EmbedBuilder,
   PermissionFlagsBits,
 } from "discord.js";
-import { Colour } from "../interfaces/colour.js";
+import { Colors } from "../../../resources/all.js";
 
 export default {
   data: new SlashCommandBuilder()
@@ -45,7 +45,7 @@ export default {
                 name: client.user?.username as string,
                 url: client.user?.avatarURL() as unknown as string,
               })  
-              .setColor(Colour.waiting)
+              .setColor(Colors.waiting)
                 .setDescription(
                   `${
                     roleOption == "add"
@@ -70,7 +70,7 @@ export default {
                 name: client.user?.username as string,
                 url: client.user?.avatarURL() as unknown as string,
               })  
-              .setColor(Colour.success)
+              .setColor(Colors.success)
                 .setDescription(
                   `The role: **${role?.name}** has been ${
                     roleOption == "add" ? "given to" : "removed from"
@@ -87,7 +87,7 @@ export default {
             name: client.user?.username as string,
             url: client.user?.avatarURL() as unknown as string,
           })
-            .setColor(Colour.error)
+            .setColor(Colors.error)
             .setDescription(
               "An error has occurred, while adding or removing this role to **All Members**."
             ),

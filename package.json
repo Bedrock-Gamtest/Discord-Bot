@@ -4,7 +4,7 @@
   "type": "module",
   "description": "A bot for the bedrock gametest discord",
   "scripts": {
-    "start": "tsc -b && node app.js"
+    "start": "tsc -b && node main.js"
   },
   "contributers": [
     {

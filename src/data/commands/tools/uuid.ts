@@ -1,10 +1,9 @@
-import { CommandInteraction } from "discord.js";
+import { Client, CommandInteraction } from "discord.js";
 
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { EmbedBuilder } from 'discord.js';
 import { randomUUID } from "crypto";
-import ClientInteface from "../interfaces/client.js";
-import { Colour } from "../interfaces/colour.js";
+import { Colors } from "../../../resources/all.js";
 
 export default {
     data: new SlashCommandBuilder()
@@ -16,7 +15,7 @@ export default {
      .setDescription('Amount') 
      .setRequired(false)
     ),
-    async execute(client:ClientInteface,interaction:CommandInteraction) {
+    async execute(client:Client,interaction:CommandInteraction) {
         //@ts-ignore
         const count = interaction?.options.getInteger("amount") || 1;
         //@ts-ignore
@@ -27,7 +26,7 @@ export default {
             name: client.user?.username as string,
             url: client.user?.avatarURL() as unknown as string,
           })
-        .setColor(Colour.default)
+        .setColor(Colors.default)
         .setDescription(`**UUID${uuid.length > 1 ? "'s":""}:**\n${uuid.join("\n")}`);
         interaction.reply({embeds:[embed]});
     }

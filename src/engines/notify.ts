@@ -2,10 +2,13 @@ import { Client, EmbedBuilder, NewsChannel } from "discord.js";
 import { MongoClient } from "mongodb";
 import * as fs from "fs";
 import * as path from "path";
-import { Colour } from "./src/interfaces/colour.js";
+import { Colors } from "../resources/all.js";
+import { Application } from "../application/app.js";
 
-export default (BotClient:Client) => {
-
+export function index(data: any) {
+  stdout('Engines', 'Idenx Function', "Running...");
+  const {app: botClient} = (data as {app: Application})
+if((process.env.MONGO_URL??"").length<1) return;
 //Gametest module update notification.
 setInterval(async () => {
     //@ts-ignore
@@ -17,7 +20,6 @@ setInterval(async () => {
   
     const db = client.db("bot");
     const collection = db.collection("module_versions");
-  
     for (const module of [
       "@minecraft/server",
       "@minecraft/server-net",
@@ -52,7 +54,7 @@ setInterval(async () => {
             $set: { module },
           });
   
-          notify(BotClient, {
+          notify(botClient, {
             module,
             version: [doc.version, data],
           });
@@ -84,7 +86,7 @@ async function notify(
           embeds: [
             new EmbedBuilder()
               .setURL(`https://www.npmjs.com/package/${data.module}`)
-              .setColor(Colour.info)
+              .setColor(Colors.info)
               .setTitle(
                 `**${data.module}** has just been updated from version **${data.version[0]}** to **${data.version[1]}**.`
               ),
@@ -92,5 +94,5 @@ async function notify(
         })
         .then((res) => res.crosspost().catch())
         .catch();
-  }
+}
   

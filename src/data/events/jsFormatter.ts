@@ -1,16 +1,15 @@
-import { Message, AttachmentBuilder } from "discord.js";
+import { Message, AttachmentBuilder, Client } from "discord.js";
 import { Buffer } from "node:buffer";
 import axios from "axios";
 
-import formatFile from "../hooks/formatFile.js";
-import ClientInteface from "../interfaces/client.js";
+import {formatFile} from "../../resources/all.js";
 
 const { max_file_size } = process.env;
 
 export default {
   event: "messageCreate",
   once: false,
-  async execute(client:ClientInteface,message: Message) {
+  async execute(client: Client, message: Message) {
     const file = message.attachments?.at(0);
     
     // @ts-ignore

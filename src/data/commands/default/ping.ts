@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
 import { Client, CommandInteraction, EmbedBuilder } from "discord.js";
-import { Colour } from "../interfaces/colour.js";
+import { Colors } from "../../../resources/all.js";
 
 export default {
   data: new SlashCommandBuilder()
@@ -18,7 +18,7 @@ export default {
             url: client.user?.avatarURL() as unknown as string,
           })
           .setDescription("```**PING!**\nWaiting for response...```")
-          .setColor(Colour.waiting),
+          .setColor(Colors.waiting),
       ],
     });
     await interaction.editReply({
@@ -31,7 +31,7 @@ export default {
           .setDescription(
             `\`\`\`**PONG! 🏓**\nReponse Time: ${Date.now() - oldDate}ms\`\`\``
           )
-          .setColor(Colour.success),
+          .setColor(Colors.success),
       ],
     });
   },
