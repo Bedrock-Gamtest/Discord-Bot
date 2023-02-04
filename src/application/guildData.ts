@@ -1,6 +1,7 @@
 import { Snowflake } from "discord.js";
 import {promises as fs} from "fs";
 
+const base = process.cwd();
 export type keys = 'logchannel' | 'suggestions' | 'bugs' | 'showcase' |'bestsuggestions';
 export type GuildData = {[key in keys]?: string} & {[key: string]: any};
 export type Never<T,not> = T extends not?never:T;
@@ -22,12 +23,12 @@ export class GuildDataManager{
     }
     isLoaded: boolean;
     async save(){
-        await fs.writeFile(this.filePath, JSON.stringify(this.data??{}), 'utf-8');
+        await fs.writeFile(base + "\\" + this.filePath, JSON.stringify(this.data??{}), 'utf-8');
         return this;
     }
     async load(){
         try {
-            this.data = JSON.parse(await fs.readFile(this.filePath,'utf-8'));
+            this.data = JSON.parse(await fs.readFile(base + "\\" + this.filePath,'utf-8'));
             if(typeof this.data !== 'object') throw new Error("Must be object format!");
         } catch (er) {
             console.error((er as Error).stack);
