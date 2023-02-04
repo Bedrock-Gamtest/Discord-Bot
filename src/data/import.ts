@@ -1,7 +1,7 @@
 import {promises} from 'fs';
 import {IApplicationCommand, IApplicationEvent} from '../application/types.js';
 
-const basePath = "./src/data", cmdPath = 'commands', eventPath = 'events';
+const basePath = process.cwd() + "\\src\\data", cmdPath = 'commands', eventPath = 'events';
 export const commands = await Commands();
 export const events = await Events();
 
